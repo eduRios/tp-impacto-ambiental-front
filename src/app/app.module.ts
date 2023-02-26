@@ -40,6 +40,8 @@ import { IndexMiembroPesadoComponent } from './miembro/index-miembro/index-miemb
 import { IndexMiembroLivianoComponent } from './miembro/index-miembro/index-miembro-liviano/index-miembro-liviano.component';
 import { IndexOrganizacionLivianoComponent } from './organizacion/index-organizacion/index-organizacion-liviano/index-organizacion-liviano.component';
 import { IndexOrganizacionPesadoComponent } from './organizacion/index-organizacion/index-organizacion-pesado/index-organizacion-pesado.component';
+import { PorSectorTerritorialComponent } from './reporte-hc/por-sector-territorial/por-sector-territorial.component';
+import { SectorTerritorialPorOrganizacionComponent } from './reporte-hc/sector-territorial-por-organizacion/sector-territorial-por-organizacion.component';
 
 @NgModule({
     declarations: [
@@ -73,6 +75,8 @@ import { IndexOrganizacionPesadoComponent } from './organizacion/index-organizac
         IndexMiembroLivianoComponent,
         IndexOrganizacionLivianoComponent,
         IndexOrganizacionPesadoComponent,
+        PorSectorTerritorialComponent,
+        SectorTerritorialPorOrganizacionComponent,
     ],
     imports: [
         BrowserModule,

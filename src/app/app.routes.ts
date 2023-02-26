@@ -13,6 +13,7 @@ import { IndexPersonaComponent } from './persona/index-persona/index-persona.com
 import { RegisterComponent } from './register/register.component';
 import { IndexSectorComponent } from './sector/index-sector/index-sector.component';
 import { IndexSolicitudComponent } from './solicitud/index-solicitud/index-solicitud.component';
+import { PorSectorTerritorialComponent } from './reporte-hc/por-sector-territorial/por-sector-territorial.component';
 
 export const routes: Routes = [
     {
@@ -66,6 +67,10 @@ export const routes: Routes = [
     {
         path: 'solicitud',
         component: IndexSolicitudComponent,
+    },
+    {
+        path: 'reportehc',
+        component: PorSectorTerritorialComponent,
     },
     {
         path: '',
