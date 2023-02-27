@@ -1,21 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { SectorTerritorial } from 'src/app/models/sector-territorial.model';
-import { BaseIndexComponent } from 'src/app/templates/base-index/base-index.component';
-import { ReporteHcService } from '../reporte-hc.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { newSectorTerritorial, SectorTerritorial } from 'src/app/models/sector-territorial.model';
+import { map, Observable } from 'rxjs';
+import { SectorTerritorialPorOrganizacionService } from './sector-territorial-por-organizacion.service';
 
 @Component({
   selector: 'app-sector-territorial-por-organizacion',
   templateUrl: './sector-territorial-por-organizacion.component.html',
   styleUrls: ['./sector-territorial-por-organizacion.component.css']
 })
-export class SectorTerritorialPorOrganizacionComponent extends BaseIndexComponent<SectorTerritorial> implements OnInit {
+export class SectorTerritorialPorOrganizacionComponent implements OnInit {
 
-  constructor(router: Router, service: ReporteHcService) {
-    super(router, 'reportehc/composicion-de-sector-territorial', service);
+  sectorTerritorial: SectorTerritorial;
+  sectorTerritorial2!: SectorTerritorial;
+  results$!: Observable<SectorTerritorial[]>;
+  sectoresT!: SectorTerritorial[];
+  
+  constructor(
+    protected route: ActivatedRoute,
+    protected router: Router,
+    protected sectorTerritorialPorOrganizacionService: SectorTerritorialPorOrganizacionService,
+) {
+    this.sectorTerritorial = newSectorTerritorial();
+    this.sectorTerritorial2 = newSectorTerritorial();
   }
 
   ngOnInit(): void {
+    
   }
+
+  navigateEntidad(id: number) {
+    this.sectorTerritorialPorOrganizacionService.getSectorTerritorialPorOrganizacion(id)
+    .subscribe(data =>{
+      this.sectoresT= data.body!.results;
+      console.log(this.sectoresT);
+    });
+}
 
 }

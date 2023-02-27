@@ -1,1 +1,47 @@
-<p>sector-territorial-por-organizacion works!</p>
+<div class="m-3">
+    <div *ngIf="!sectorTerritorial">Cargando...</div>
+    <form
+        *ngIf="sectorTerritorial"
+        class="mb-3"
+        #form="ngForm"
+    >
+        <div class="row mb-3">
+            <div class="col-6">
+                <label for="sectorTerritorial" class="form-label">
+                    Sector Territorial
+                </label>
+                <app-sector-territorial-select
+                    [(selected)]="sectorTerritorial.sectorTerritorial"
+                    
+                    id="sectorTerritorial"
+                ></app-sector-territorial-select>
+            </div>
+        </div>
+    </form>
+</div>
+<button
+                        type="button"
+                        (click)="navigateEntidad(sectorTerritorial.sectorTerritorial!.id)"
+                        class="btn btn-info"
+                    >
+                        Editar
+                    </button>
+<app-index-template entity="sectorTerritorial2" [supportsCreate]="false">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Organizacion</th>
+                <th>Valor HC</th>
+                <th>Unidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let sectorTerritorial2 of sectoresT">
+                <td>{{ sectorTerritorial2.organizacion!.text}}</td>
+                <td>{{ sectorTerritorial2.hc!.valor }}</td>
+                <td>{{ sectorTerritorial2.hc.unidad!.text }}</td>
+            </tr>
+        </tbody>
+    </table>
+</app-index-template>
+

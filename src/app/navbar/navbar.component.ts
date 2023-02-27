@@ -9,6 +9,7 @@ import { AuthService } from '../auth/auth.service';
 export class NavbarComponent implements OnInit {
     authService: AuthService;
     navbarOpen= false;
+    dropdownOpen= false;
 
     constructor(authService: AuthService) {
         this.authService = authService;
@@ -18,5 +19,8 @@ export class NavbarComponent implements OnInit {
 
     toggleNavbar(){
         this.navbarOpen = ! this.navbarOpen;
+    }
+    toggleDropdown(){
+        this.dropdownOpen = ! this.dropdownOpen;
     }
 }

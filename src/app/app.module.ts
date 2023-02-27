@@ -42,6 +42,7 @@ import { IndexOrganizacionLivianoComponent } from './organizacion/index-organiza
 import { IndexOrganizacionPesadoComponent } from './organizacion/index-organizacion/index-organizacion-pesado/index-organizacion-pesado.component';
 import { PorSectorTerritorialComponent } from './reporte-hc/por-sector-territorial/por-sector-territorial.component';
 import { SectorTerritorialPorOrganizacionComponent } from './reporte-hc/sector-territorial-por-organizacion/sector-territorial-por-organizacion.component';
+import { SectorTerritorialSelectComponent } from './selects/sector-territorial-select/sector-territorial-select.component';
 
 @NgModule({
     declarations: [
@@ -77,6 +78,7 @@ import { SectorTerritorialPorOrganizacionComponent } from './reporte-hc/sector-t
         IndexOrganizacionPesadoComponent,
         PorSectorTerritorialComponent,
         SectorTerritorialPorOrganizacionComponent,
+        SectorTerritorialSelectComponent,
     ],
     imports: [
         BrowserModule,
