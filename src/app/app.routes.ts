@@ -15,6 +15,7 @@ import { IndexSectorComponent } from './sector/index-sector/index-sector.compone
 import { IndexSolicitudComponent } from './solicitud/index-solicitud/index-solicitud.component';
 import { PorSectorTerritorialComponent } from './reporte-hc/por-sector-territorial/por-sector-territorial.component';
 import { SectorTerritorialPorOrganizacionComponent } from './reporte-hc/sector-territorial-por-organizacion/sector-territorial-por-organizacion.component';
+import { ClasificacionPorOrganizacionComponent } from './reporte-hc/clasificacion-por-organizacion/clasificacion-por-organizacion.component';
 
 export const routes: Routes = [
     {
@@ -76,6 +77,10 @@ export const routes: Routes = [
     {
         path: 'reportehcpororg',
         component: SectorTerritorialPorOrganizacionComponent,
+    },
+    {
+        path: 'reportehcporclasificacion',
+        component: ClasificacionPorOrganizacionComponent,
     },
     {
         path: '',

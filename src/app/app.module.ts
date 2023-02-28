@@ -43,6 +43,7 @@ import { IndexOrganizacionPesadoComponent } from './organizacion/index-organizac
 import { PorSectorTerritorialComponent } from './reporte-hc/por-sector-territorial/por-sector-territorial.component';
 import { SectorTerritorialPorOrganizacionComponent } from './reporte-hc/sector-territorial-por-organizacion/sector-territorial-por-organizacion.component';
 import { SectorTerritorialSelectComponent } from './selects/sector-territorial-select/sector-territorial-select.component';
+import { ClasificacionPorOrganizacionComponent } from './reporte-hc/clasificacion-por-organizacion/clasificacion-por-organizacion.component';
 
 @NgModule({
     declarations: [
@@ -79,6 +80,7 @@ import { SectorTerritorialSelectComponent } from './selects/sector-territorial-s
         PorSectorTerritorialComponent,
         SectorTerritorialPorOrganizacionComponent,
         SectorTerritorialSelectComponent,
+        ClasificacionPorOrganizacionComponent,
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,18 @@
+<app-index-template entity="sectorTerritorial" [supportsCreate]="false">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>clasificacion</th>
+                <th>Valor HC por territorio</th>
+                <th>Unidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let sectorTerritorial of results$ | async">
+                <td>{{ sectorTerritorial.clasificacion!.text}}</td>
+                <td>{{ sectorTerritorial.hc!.valor }}</td>
+                <td>{{ sectorTerritorial.hc.unidad!.text }}</td>
+            </tr>
+        </tbody>
+    </table>
+</app-index-template>
