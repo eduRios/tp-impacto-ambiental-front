@@ -10,6 +10,7 @@ export interface Organizacion extends Base {
     razonSocial: string;
     tipoOrganizacion: IdTextPair | null;
     clasificacion: IdTextPair | null;
+    sectorTerritorial: IdTextPair | null;
     cantDiasHabilesPorSemana: number;
     factorK: CantidadComoIdTextPair;
     contactos: Contacto[];
@@ -20,6 +21,7 @@ export const newOrganizacion = (valores?: {
     razonSocial?: string;
     tipoOrganizacion?: IdTextPair;
     clasificacion?: IdTextPair;
+    sectorTerritorial?: IdTextPair;
     cantDiasHabilesPorSemana?: number;
     factorK?: CantidadComoIdTextPair;
     contactos?: Contacto[];
@@ -29,6 +31,7 @@ export const newOrganizacion = (valores?: {
         razonSocial: valores?.razonSocial ?? '',
         tipoOrganizacion: valores?.tipoOrganizacion ?? null,
         clasificacion: valores?.clasificacion ?? null,
+        sectorTerritorial: valores?.sectorTerritorial ?? null,
         cantDiasHabilesPorSemana: valores?.cantDiasHabilesPorSemana ?? 5,
         factorK: valores?.factorK ?? newCantidadComoIdTextPair(),
         contactos: valores?.contactos ?? [],
