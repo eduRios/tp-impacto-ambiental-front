@@ -44,6 +44,8 @@ import { PorSectorTerritorialComponent } from './reporte-hc/por-sector-territori
 import { SectorTerritorialPorOrganizacionComponent } from './reporte-hc/sector-territorial-por-organizacion/sector-territorial-por-organizacion.component';
 import { SectorTerritorialSelectComponent } from './selects/sector-territorial-select/sector-territorial-select.component';
 import { ClasificacionPorOrganizacionComponent } from './reporte-hc/clasificacion-por-organizacion/clasificacion-por-organizacion.component';
+import { CrearSectorComponent } from './sector/crear-sector/crear-sector.component';
+import { LocalidadSelectComponent } from './selects/localidad-select/localidad-select.component';
 
 @NgModule({
     declarations: [
@@ -81,6 +83,8 @@ import { ClasificacionPorOrganizacionComponent } from './reporte-hc/clasificacio
         SectorTerritorialPorOrganizacionComponent,
         SectorTerritorialSelectComponent,
         ClasificacionPorOrganizacionComponent,
+        CrearSectorComponent,
+        LocalidadSelectComponent,
     ],
     imports: [
         BrowserModule,

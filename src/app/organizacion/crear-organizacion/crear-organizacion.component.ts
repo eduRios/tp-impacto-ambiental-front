@@ -14,14 +14,14 @@ import { OrganizacionJsonService } from '../organizacion-json.service';
 })
 export class CrearOrganizacionComponent implements OnInit {
     organizacion: Organizacion;
-    sectorTerritorial: IdTextPair | null;
+    sectorTerritorial!: IdTextPair | null;
 
     constructor(
         private organizacionService: OrganizacionJsonService,
         private router: Router
     ) {
         this.organizacion = newOrganizacion();
-        this.sectorTerritorial = newIdTextPair();
+        //this.sectorTerritorial = newIdTextPair();
     }
 
     ngOnInit(): void {}

@@ -1,0 +1,102 @@
+<div class="m-3">
+    <form
+        (ngSubmit)="onSubmit()"
+        class="mb-3"
+        #form="ngForm"
+    >
+        <div class="row mb-3">
+            <div class="col-4">
+                <label for="nombre" class="form-label">
+                    Nombre sector
+                </label>
+                <input
+                    type="text"
+                    id="nombre"
+                    class="form-control"
+                    required
+                    [(ngModel)]="request.nombre"
+                    name="nombre"
+                />
+            </div>
+            <div class="col-4">
+                <label for="nombre" class="form-label">
+                    Nombre Espacio
+                </label>
+                <input
+                    type="text"
+                    id="nombre"
+                    class="form-control"
+                    required
+                    [(ngModel)]="espacio.nombre"
+                    name="nombre"
+                />
+            </div>
+            <div class="col-4">
+                <label for="tipoEspacio" class="form-label">
+                    Tipo Espacio
+                </label>
+                <input
+                    type="text"
+                    id="tipoEspacio"
+                    class="form-control"
+                    required
+                    [(ngModel)]="espacio.tipoEspacio"
+                    name="tipoEspacio"
+                />
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-4">
+                <label for="calle" class="form-label">
+                    Calle
+                </label>
+                <input
+                    type="text"
+                    id="calle"
+                    class="form-control"
+                    required
+                    [(ngModel)]="espacio.direccion!.calle"
+                    name="calle"
+                />
+            </div>
+            <div class="col-4">
+                <label for="altura" class="form-label">
+                    Altura
+                </label>
+                <input
+                    type="text"
+                    id="altura"
+                    class="form-control"
+                    required
+                    [(ngModel)]="espacio.direccion!.altura"
+                    name="altura"
+                />
+            </div>
+            <div class="col-4">
+                <label for="organizacion" class="form-label">
+                    Organizacion
+                </label>
+                <app-organizacion-select
+                    [(selected)]="organizacion"
+                    id="organizacion"
+                ></app-organizacion-select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <label for="localidad" class="form-label">
+                    Localidad
+                </label>
+                <app-localidad-select
+                    [(selected)]="localidad"
+                    id="localidad"
+                ></app-localidad-select>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

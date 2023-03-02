@@ -16,6 +16,7 @@ import { IndexSolicitudComponent } from './solicitud/index-solicitud/index-solic
 import { PorSectorTerritorialComponent } from './reporte-hc/por-sector-territorial/por-sector-territorial.component';
 import { SectorTerritorialPorOrganizacionComponent } from './reporte-hc/sector-territorial-por-organizacion/sector-territorial-por-organizacion.component';
 import { ClasificacionPorOrganizacionComponent } from './reporte-hc/clasificacion-por-organizacion/clasificacion-por-organizacion.component';
+import { CrearSectorComponent } from './sector/crear-sector/crear-sector.component';
 
 export const routes: Routes = [
     {
@@ -81,6 +82,10 @@ export const routes: Routes = [
     {
         path: 'reportehcporclasificacion',
         component: ClasificacionPorOrganizacionComponent,
+    },
+    {
+        path: 'sector/crear',
+        component: CrearSectorComponent,
     },
     {
         path: '',
